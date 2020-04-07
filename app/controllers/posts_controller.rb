@@ -12,7 +12,6 @@ class PostsController < ApplicationController
 	end
 
 	def create
-		raise params.inspect
 	  @post = Post.new(params.require(:post).permit(:title, :description))
 	  # @post.title = params.require(:post).permit(:title)
 	  # @post.description = params.require(:post).permit(:description)
