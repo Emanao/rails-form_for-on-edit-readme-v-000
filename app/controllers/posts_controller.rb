@@ -12,6 +12,7 @@ class PostsController < ApplicationController
 	end
 
 	def create
+		raise params
 	  @post = Post.new(params.require(:post).permit(:title, :description))
 	  # @post.title = params.require(:post).permit(:title)
 	  # @post.description = params.require(:post).permit(:description)
